@@ -76,6 +76,12 @@ displayed if the 'eventbrite' field in the header is not set.
 </iframe>
 {% endif %}
 
+<p class="text-center">
+  <a href="https://www.eventbrite.ca/e/library-carpentry-redux-tickets-102980284804" target="_blank">
+    <button type="button" class="btn btn-info">Register Here</button>
+  </a>
+</p>
+<hr/>
 
 <h2 id="general">General Information</h2>
 
@@ -124,14 +130,6 @@ address.
 {% assign online = "false" %}
 {% endif %}
 {% if page.latitude and page.longitude and online == "false" %}
-<p id="where">
-  <strong>Where:</strong>
-  {{page.address}}.
-  Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{page.latitude}}&mlon={{page.longitude}}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="//maps.google.com/maps?q={{page.latitude}},{{page.longitude}}">Google Maps</a>.
-</p>
 {% elsif online == "true_public" %}
 <p id="where">
   <strong>Where:</strong>
@@ -165,7 +163,7 @@ SPECIAL REQUIREMENTS
 Modify the block below if there are any special requirements.
 {% endcomment %}
 <p id="requirements">
-  <strong>Requirements:</strong> Participants must bring a laptop with a
+  <strong>Requirements:</strong> Participants must use a laptop with the 
   Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software packages installed (listed <a href="#setup">below</a>).
 </p>
 
